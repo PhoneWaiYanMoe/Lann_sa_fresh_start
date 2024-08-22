@@ -1,0 +1,49 @@
+:root {
+  --primary-color: #6C63FF; /* Purple */
+  --secondary-color-1: #FF8C42; /* Orange */
+  --secondary-color-2: #00BFA6; /* Green */
+  --accent-color: #007BFF; /* Blue */
+  --background-color: #FFFFFF; /* White */
+  --text-color: #333333; /* Dark Grey */
+  --primary-color-hover: #574b9c; /* Darker Purple */
+  --secondary-color-1-hover: #cc7135; /* Darker Orange */
+  --secondary-color-2-hover: #008f7c; /* Darker Green */
+  --accent-color-hover: #0064c0; /* Darker Blue */
+}
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+.h-font {
+  font-family: 'Merienda', cursive;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.custom-bg {
+  background-color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+.custom-bg:hover {
+  background-color: var(--primary-color-hover);
+  border-color: var(--primary-color-hover);
+}
+
+.h-line {
+  width: 150px;
+  margin: 0 auto;
+  height: 1.7px;
+  background-color: var(--text-color);
+}

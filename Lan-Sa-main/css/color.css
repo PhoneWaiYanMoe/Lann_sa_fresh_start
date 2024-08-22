@@ -1,0 +1,85 @@
+/* Primary Colors */
+:root {
+  --primary-color: #6C63FF; /* Purple */
+  --secondary-color-1: #FF8C42; /* Orange */
+  --secondary-color-2: #00BFA6; /* Green */
+  --accent-color: #007BFF; /* Blue */
+  --background-color: #FFFFFF; /* White */
+  --text-color: #333333; /* Dark Grey */
+}
+
+/* Global Styles */
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header */
+header {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Navigation */
+nav {
+  background-color: var(--secondary-color-1);
+  padding: 0.5rem;
+}
+
+nav a {
+  color: var(--background-color);
+  margin: 0 1rem;
+  text-decoration: none;
+}
+
+/* Main Content */
+main {
+  padding: 2rem;
+}
+
+h1, h2, h3 {
+  color: var(--primary-color);
+}
+
+/* Buttons */
+button {
+  background-color: var(--accent-color);
+  border: none;
+  color: var(--background-color);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--secondary-color-2);
+}
+
+/* Footer */
+footer {
+  background-color: var(--primary-color);
+  color: var(--background-color);
+  padding: 1rem;
+  text-align: center;
+}
+
+/* Utility Classes */
+.text-primary {
+  color: var(--primary-color);
+}
+
+.bg-secondary-1 {
+  background-color: var(--secondary-color-1);
+}
+
+.bg-secondary-2 {
+  background-color: var(--secondary-color-2);
+}
+
+.bg-accent {
+  background-color: var(--accent-color);
+}
