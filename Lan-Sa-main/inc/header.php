@@ -12,7 +12,7 @@ if ($result && $result->num_rows > 0) {
     $row = $result->fetch_assoc();
     $logo_path = 'admin/' . $row['logo_path']; // Correct the path with 'admin/' prefix
 } else {
-    $logo_path = "images/Logo/Lo.jpg"; // Default logo path (adjust this as needed)
+    $logo_path = "../images/Logo/Lo.jpg"; // Default logo path (adjust this as needed)
 }
 
 $conn->close();

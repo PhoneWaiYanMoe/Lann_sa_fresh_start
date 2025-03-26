@@ -128,7 +128,7 @@ $conn->close();
                     </div>
 
                     <div class="text-center">
-                        <button type="button" class="btn btn-sm text-white custom-bg shadow-none" onclick="checkLogin()">
+                        <button type="button" class="btn btn-sm text-black custom-bg shadow-none" onclick="checkLogin()">
                             Submit
                         </button>
                     </div>
@@ -184,7 +184,7 @@ $conn->close();
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <script>
-       function checkLogin() {
+   function checkLogin() {
     <?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] === true): ?>
         updateModalContent();
         $('#bookingconfirm').modal('show');
@@ -192,7 +192,6 @@ $conn->close();
         window.location.href = 'login.php';
     <?php endif; ?>
 }
-
 
 function updateModalContent() {
     $('#modalForm input[type="hidden"]').remove(); // Clear previous hidden inputs
@@ -205,16 +204,15 @@ function updateModalContent() {
     const chooseCounselor = $('#chooseCounselor').val();
 
     // Append hidden fields to the form
-    $('#modalForm').append(<input type="hidden" name="availableDate" value="${availableDate}">);
-    $('#modalForm').append(<input type="hidden" name="availableTime" value="${availableTime}">);
-    $('#modalForm').append(<input type="hidden" name="chooseCountry" value="${chooseCountry}">);
-    $('#modalForm').append(<input type="hidden" name="chooseService" value="${chooseService}">);
-    $('#modalForm').append(<input type="hidden" name="servicePrice" value="${servicePrice}">);
-    $('#modalForm').append(<input type="hidden" name="chooseCounselor" value="${chooseCounselor}">);
+    $('#modalForm').append(`<input type="hidden" name="availableDate" value="${availableDate}">`);
+    $('#modalForm').append(`<input type="hidden" name="availableTime" value="${availableTime}">`);
+    $('#modalForm').append(`<input type="hidden" name="chooseCountry" value="${chooseCountry}">`);
+    $('#modalForm').append(`<input type="hidden" name="chooseService" value="${chooseService}">`);
+    $('#modalForm').append(`<input type="hidden" name="servicePrice" value="${servicePrice}">`);
+    $('#modalForm').append(`<input type="hidden" name="chooseCounselor" value="${chooseCounselor}">`);
 
-    $('#modalBodyContent').text(Are you sure to book a session on ${availableDate} at ${availableTime} for the ${chooseService} service with ${chooseCounselor} in ${chooseCountry}?);
+    $('#modalBodyContent').text(`Are you sure you want to book a session on ${availableDate} at ${availableTime} for the ${chooseService} service with ${chooseCounselor} in ${chooseCountry}?`);
 }
-
 
     </script>
 </body>
